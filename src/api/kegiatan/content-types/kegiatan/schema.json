@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kegiatans",
+  "info": {
+    "singularName": "kegiatan",
+    "pluralName": "kegiatans",
+    "displayName": "kegiatan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tanggal": {
+      "type": "datetime"
+    },
+    "deskripsi": {
+      "type": "text"
+    },
+    "lokasi": {
+      "type": "text"
+    },
+    "peserta": {
+      "type": "richtext"
+    },
+    "warta_jemaats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::warta-jemaat.warta-jemaat",
+      "mappedBy": "kegiatan"
+    }
+  }
+}

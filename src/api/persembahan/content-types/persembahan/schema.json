@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "persembahans",
+  "info": {
+    "singularName": "persembahan",
+    "pluralName": "persembahans",
+    "displayName": "persembahan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "kategori": {
+      "type": "enumeration",
+      "enum": [
+        "ungu",
+        "merah",
+        "pembangunan",
+        "anak",
+        "khusus",
+        "donasi"
+      ]
+    },
+    "jumlah": {
+      "type": "integer"
+    },
+    "ibadahs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ibadah.ibadah",
+      "mappedBy": "persembahan"
+    }
+  }
+}

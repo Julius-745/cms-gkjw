@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "anggota_jemaats",
+  "info": {
+    "singularName": "anggota-jemaat",
+    "pluralName": "anggota-jemaats",
+    "displayName": "Anggota Jemaat"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama_lengkap": {
+      "type": "string"
+    },
+    "Alamat": {
+      "type": "text"
+    },
+    "tanggal_lahir": {
+      "type": "date"
+    },
+    "tanggal_pernikahan": {
+      "type": "date"
+    },
+    "krw": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::krw.krw",
+      "inversedBy": "anggota_jemaats"
+    }
+  }
+}

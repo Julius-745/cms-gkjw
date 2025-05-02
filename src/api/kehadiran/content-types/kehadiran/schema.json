@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "kehadirans",
+  "info": {
+    "singularName": "kehadiran",
+    "pluralName": "kehadirans",
+    "displayName": "kehadiran"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "kategori": {
+      "type": "enumeration",
+      "enum": [
+        "dewasa_l",
+        "dewasa_p",
+        "majelis_l",
+        "majelis_p"
+      ]
+    },
+    "jumlah": {
+      "type": "integer"
+    },
+    "ibadahs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::ibadah.ibadah",
+      "mappedBy": "kehadiran"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ibadahs",
+  "info": {
+    "singularName": "ibadah",
+    "pluralName": "ibadahs",
+    "displayName": "ibadah",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tanggal": {
+      "type": "datetime"
+    },
+    "jenis": {
+      "type": "enumeration",
+      "enum": [
+        "pagi",
+        "sore",
+        "krw",
+        "hari natal",
+        "hari paskah",
+        "hari kebangkitan",
+        "hari rabu abu",
+        "hari pantekosta",
+        "hari raya unduh-unduh",
+        "hari ulang tahun gereja"
+      ]
+    },
+    "pelayan_firman": {
+      "type": "string"
+    },
+    "bacaan": {
+      "type": "richtext"
+    },
+    "dasar_persembahan": {
+      "type": "string"
+    },
+    "operator_lcd": {
+      "type": "string"
+    },
+    "organis": {
+      "type": "string"
+    },
+    "song_leader": {
+      "type": "richtext"
+    },
+    "lokasi": {
+      "type": "richtext"
+    },
+    "tuan_rumah": {
+      "type": "string"
+    },
+    "kehadiran": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::kehadiran.kehadiran",
+      "inversedBy": "ibadahs"
+    },
+    "persembahan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::persembahan.persembahan",
+      "inversedBy": "ibadahs"
+    },
+    "warta_jemaats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::warta-jemaat.warta-jemaat",
+      "mappedBy": "ibadah"
+    }
+  }
+}

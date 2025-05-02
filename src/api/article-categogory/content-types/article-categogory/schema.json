@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "article_categogories",
+  "info": {
+    "singularName": "article-categogory",
+    "pluralName": "article-categogories",
+    "displayName": "article-category",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama_kategori": {
+      "type": "string"
+    }
+  }
+}

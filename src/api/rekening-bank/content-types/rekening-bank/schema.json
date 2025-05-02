@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "rekening_banks",
+  "info": {
+    "singularName": "rekening-bank",
+    "pluralName": "rekening-banks",
+    "displayName": "RekeningBank"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tujuan": {
+      "type": "string"
+    },
+    "nama_bank": {
+      "type": "string"
+    },
+    "nomor_rekening": {
+      "type": "string"
+    },
+    "pemilik_rekening": {
+      "type": "string"
+    }
+  }
+}

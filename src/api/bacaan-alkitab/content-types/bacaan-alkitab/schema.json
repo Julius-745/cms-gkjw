@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bacaan_alkitabs",
+  "info": {
+    "singularName": "bacaan-alkitab",
+    "pluralName": "bacaan-alkitabs",
+    "displayName": "bacaan_alkitab"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tanggal": {
+      "type": "datetime"
+    },
+    "tema": {
+      "type": "string"
+    },
+    "referensi_alkitab": {
+      "type": "richtext"
+    },
+    "warta_jemaats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::warta-jemaat.warta-jemaat",
+      "mappedBy": "bacaan_alkitab"
+    }
+  }
+}

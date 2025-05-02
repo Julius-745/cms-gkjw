@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "siaran_radios",
+  "info": {
+    "singularName": "siaran-radio",
+    "pluralName": "siaran-radios",
+    "displayName": "Siaran Radio"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama_program": {
+      "type": "string"
+    },
+    "hari": {
+      "type": "datetime"
+    },
+    "link_streaming": {
+      "type": "string"
+    }
+  }
+}

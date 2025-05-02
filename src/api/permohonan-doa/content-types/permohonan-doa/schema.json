@@ -1,0 +1,34 @@
+{
+  "kind": "collectionType",
+  "collectionName": "permohonan_doas",
+  "info": {
+    "singularName": "permohonan-doa",
+    "pluralName": "permohonan-doas",
+    "displayName": "permohonan_doa"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "kategori": {
+      "type": "enumeration",
+      "enum": [
+        "sakit",
+        "panitia",
+        "pendidikan"
+      ]
+    },
+    "deskripsi": {
+      "type": "text"
+    },
+    "nama_nama": {
+      "type": "richtext"
+    },
+    "warta_jemaats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::warta-jemaat.warta-jemaat",
+      "mappedBy": "permohonan_doa"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "renungans",
+  "info": {
+    "singularName": "renungan",
+    "pluralName": "renungans",
+    "displayName": "renungan"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "judul": {
+      "type": "string"
+    },
+    "bacaan_Alkitab": {
+      "type": "string"
+    },
+    "isi": {
+      "type": "richtext"
+    },
+    "doa": {
+      "type": "blocks"
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "warta_jemaats",
+  "info": {
+    "singularName": "warta-jemaat",
+    "pluralName": "warta-jemaats",
+    "displayName": "Warta Jemaat",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "tanggal": {
+      "type": "date"
+    },
+    "nomor_edisi": {
+      "type": "string"
+    },
+    "tema": {
+      "type": "string"
+    },
+    "info_gereja": {
+      "type": "text"
+    },
+    "renungan": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::renungan.renungan"
+    },
+    "ibadah": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::ibadah.ibadah",
+      "inversedBy": "warta_jemaats"
+    },
+    "kegiatan": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::kegiatan.kegiatan",
+      "inversedBy": "warta_jemaats"
+    },
+    "permohonan_doa": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::permohonan-doa.permohonan-doa",
+      "inversedBy": "warta_jemaats"
+    },
+    "bacaan_alkitab": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::bacaan-alkitab.bacaan-alkitab",
+      "inversedBy": "warta_jemaats"
+    }
+  }
+}

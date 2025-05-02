@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "krws",
+  "info": {
+    "singularName": "krw",
+    "pluralName": "krws",
+    "displayName": "KRW"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "nama_krw": {
+      "type": "string"
+    },
+    "ketua": {
+      "type": "string"
+    },
+    "anggota_jemaats": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::anggota-jemaat.anggota-jemaat",
+      "mappedBy": "krw"
+    }
+  }
+}
